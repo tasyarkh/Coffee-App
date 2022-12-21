@@ -196,7 +196,7 @@ class Orders extends StatelessWidget {
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                         Column(
-                          children: [
+                          children: const [
                             Text(
                                 "Macchiato coffee drink with whipped cream that adds a creamy feel")
                           ],
@@ -283,16 +283,16 @@ class Orders extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                Text(
+                                const Text(
                                   "Price",
                                   style: TextStyle(
                                       color: Colors.white, fontFamily: "Amiko"),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 3,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       "Rp",
                                       style: TextStyle(
@@ -300,7 +300,7 @@ class Orders extends StatelessWidget {
                                           fontFamily: "Amiko",
                                           fontWeight: Styling.semibold),
                                     ),
-                                    Text(
+                                     Text(
                                       "24K",
                                       style: TextStyle(
                                           color: Colors.white,
@@ -318,7 +318,7 @@ class Orders extends StatelessWidget {
                               color: Styling.primaryColor,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20)),
-                              child: Text(
+                              child: const Text(
                                 "Buy",
                                 style: TextStyle(color: Colors.white),
                               ),

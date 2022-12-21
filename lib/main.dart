@@ -3,12 +3,7 @@ import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => {
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        systemNavigationBarColor: Styling.bg,
-        statusBarColor: Color(0xff0c0f14),
-      ))
-    };
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
