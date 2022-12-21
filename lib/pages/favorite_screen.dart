@@ -12,7 +12,10 @@ class _FavState extends State<Fav> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("hee"),
+        centerTitle: true,
+        title: Text("Your Favorite Coffee",
+        style: TextStyle(fontFamily: "Amiko",
+        ),),
       ),
     );
   }
