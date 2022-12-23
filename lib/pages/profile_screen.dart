@@ -1,3 +1,5 @@
+import 'package:coffeeku/components/profile_menu.dart';
+import 'package:coffeeku/components/profile_picture.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +20,38 @@ class _ProfileState extends State<Profile> {
           color: Colors.black12,
         ),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Your Profile",
           style: TextStyle(
             fontFamily: "Amiko",
           ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 50),
+        child: Column(
+          children: [
+            PictProfile(),
+            const SizedBox(
+              height: 20,
+            ),
+            MenuProfl(
+              press: () {},
+              text: "My Account",
+            ),
+            MenuProfl(
+              press: () {},
+              text: "Notification",
+            ),
+            MenuProfl(
+              press: () {},
+              text: "History Order",
+            ),
+            MenuProfl(
+              press: () {},
+              text: "Logout",
+            )
+          ],
         ),
       ),
     );

@@ -26,13 +26,18 @@ class _FavState extends State<Fav> {
           ),
         ),
       ),
-      body: ListView(
-        children: [
-          favItem(),
-          favItem(),
-          favItem(),
-          favItem(),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20),
+        child: ListView(
+          children: [
+            favItem(),
+            favItem(),
+            favItem(),
+            favItem(),
+            favItem(),
+            favItem(),
+          ],
+        ),
       ),
     );
   }
