@@ -1,6 +1,6 @@
-
 import 'dart:ui';
 
+import 'package:coffeeku/components/bottom_navigation.dart';
 import 'package:coffeeku/pages/home_screen.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
@@ -156,7 +156,7 @@ class Orders extends StatelessWidget {
                                       onPressed: () {
                                         Navigator.of(context).push(
                                             MaterialPageRoute(
-                                                builder: (context) => Home()));
+                                                builder: (context) => Nav()));
                                       },
                                       icon: const Icon(
                                         Icons.arrow_back_ios_new,
@@ -174,7 +174,7 @@ class Orders extends StatelessWidget {
                                   child: IconButton(
                                       onPressed: () {},
                                       icon: const Icon(
-                                        Icons.favorite,
+                                        Icons.favorite_border,
                                         size: 20,
                                         color: Styling.secondaryColor,
                                       )),
@@ -300,7 +300,7 @@ class Orders extends StatelessWidget {
                                           fontFamily: "Amiko",
                                           fontWeight: Styling.semibold),
                                     ),
-                                     Text(
+                                    Text(
                                       "24K",
                                       style: TextStyle(
                                           color: Colors.white,

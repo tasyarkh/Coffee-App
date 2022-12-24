@@ -67,6 +67,9 @@ flutter:
     - assets/img/macLat.jpg
     - assets/img/mavOri.jpg
     - assets/img/prof.jpeg
+    - assets/img/brew.jpg
+    - assets/img/cappucino.jpg
+    - assets/img/americano.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

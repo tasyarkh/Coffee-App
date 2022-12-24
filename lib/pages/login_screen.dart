@@ -1,4 +1,5 @@
-import 'package:coffeeku/components/bottomNav.dart';
+
+import 'package:coffeeku/components/bottom_navigation.dart';
 import 'package:coffeeku/pages/home_screen.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';

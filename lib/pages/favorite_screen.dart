@@ -1,4 +1,4 @@
-import 'package:coffeeku/components/fav.dart';
+import 'package:coffeeku/components/favorite_item.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
 
@@ -30,12 +30,27 @@ class _FavState extends State<Fav> {
         padding: const EdgeInsets.only(top: 20),
         child: ListView(
           children: [
-            favItem(),
-            favItem(),
-            favItem(),
-            favItem(),
-            favItem(),
-            favItem(),
+            FavItem(
+                text: "Macchiatto Whipcream",
+                press: () {},
+                images: "assets/img/macwhip.jpg"),
+            FavItem(
+                text: "Original Macchiato",
+                press: () {},
+                images: "assets/img/mavOri.jpg"),
+            FavItem(
+                text: "Machiatto Latte",
+                press: () {},
+                images: "assets/img/macLat.jpg"),
+            FavItem(
+                text: "Capuccino",
+                press: () {},
+                images: "assets/img/cappucino.jpg"),
+            FavItem(text: "Brew", press: () {}, images: "assets/img/brew.jpg"),
+            FavItem(
+                text: "Americano",
+                press: () {},
+                images: "assets/img/americano.jpg"),
           ],
         ),
       ),

@@ -23,7 +23,7 @@ class MenuProfl extends StatelessWidget {
           color: Styling.secondaryColor.withOpacity(0.3),
           onPressed: press,
           child: Row(
-            children:  [
+            children: [
               const Icon(
                 Icons.person,
                 color: Styling.primaryColor,
@@ -39,7 +39,10 @@ class MenuProfl extends StatelessWidget {
                     fontFamily: "Amiko",
                     fontSize: 15),
               )),
-              const Icon(Icons.arrow_forward_ios)
+              const Icon(
+                Icons.arrow_forward_ios,
+                color: Styling.secondaryColor,
+              )
             ],
           )),
     );

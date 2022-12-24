@@ -22,7 +22,6 @@ class PictProfile extends StatelessWidget {
               height: 46,
               width: 46,
               child: FlatButton(
-                
                 onPressed: () {},
                 color: Colors.grey,
                 child: Icon(Icons.camera_enhance),

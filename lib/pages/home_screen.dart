@@ -1,3 +1,4 @@
+import 'package:coffeeku/components/item_coffee.dart';
 import 'package:coffeeku/pages/order_screen.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
@@ -31,130 +32,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   void dispose() {
     _tabController.dispose();
     super.dispose();
-  }
-
-  Widget itemCoffee({images, title, subTitle, price, rate, context}) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => Orders()));
-      },
-      child: Container(
-        width: widthScreen * 0.4 + 10,
-        height: heightScreen * 0.3,
-        margin: EdgeInsets.all(14.0),
-        padding: EdgeInsets.all(10),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(20.0)),
-        child: Stack(
-          alignment: Alignment.topRight,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 2.0,
-                              spreadRadius: 1.0,
-                              color: Styling.primaryColor.withOpacity(0.4))
-                        ],
-                        image: DecorationImage(
-                            image: AssetImage(images), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(20.0)),
-                  ),
-                  flex: 2,
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: Styling.semibold,
-                            fontFamily: "Amiko"),
-                      ),
-                      SizedBox(height: 4),
-                      Text(
-                        subTitle,
-                        style: TextStyle(
-                            color: Colors.white.withOpacity(0.5),
-                            fontFamily: "Amiko",
-                            fontSize: 11),
-                      ),
-                      SizedBox(height: 4),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              const Text(
-                                "Rp",
-                                style: TextStyle(
-                                    fontWeight: Styling.regular,
-                                    color: Styling.primaryColor,
-                                    fontFamily: "Amiko"),
-                              ),
-                              Text(
-                                "$price",
-                                style: const TextStyle(
-                                    fontWeight: Styling.semibold,
-                                    color: Colors.white,
-                                    fontFamily: "Amiko"),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Styling.primaryColor,
-                              borderRadius: BorderRadius.circular(7),
-                            ),
-                            child:
-                                Icon(Icons.add, size: 25, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              height: 20,
-              width: 55,
-              decoration: const BoxDecoration(
-                color: Color(0xff231715),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(15),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  const Icon(Icons.star, size: 12, color: Styling.primaryColor),
-                  Text(
-                    "$rate",
-                    style: const TextStyle(
-                        color: Colors.white, fontWeight: Styling.bold),
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
   }
 
   @override
@@ -291,28 +168,36 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  itemCoffee(
+                  ItemCoffee(
+                      widthScreen: widthScreen,
+                      heightScreen: heightScreen,
                       context: context,
                       images: "assets/img/macwhip.jpg",
-                      title: "Machiatto Whip",
-                      subTitle: "With Whipped Cream",
-                      price: ". 24K",
+                      title: "Macchiatto Whip",
+                      subTitle: "Witt whipcream fresh",
+                      price: "24K",
                       rate: 2.5),
-                  itemCoffee(
+                  ItemCoffee(
+                      widthScreen: widthScreen,
+                      heightScreen: heightScreen,
                       context: context,
                       images: "assets/img/icemac.jpg",
                       title: "Ice Machiatto",
                       subTitle: "With Milk Cream",
                       price: ". 27K",
                       rate: 2.9),
-                  itemCoffee(
+                  ItemCoffee(
+                      widthScreen: widthScreen,
+                      heightScreen: heightScreen,
                       context: context,
                       images: "assets/img/mavOri.jpg",
                       title: "Machiatto Original",
                       subTitle: "With Pure Machiatto",
                       price: ". 23K",
                       rate: 2.6),
-                  itemCoffee(
+                  ItemCoffee(
+                      widthScreen: widthScreen,
+                      heightScreen: heightScreen,
                       context: context,
                       images: "assets/img/macLat.jpg",
                       title: "Machiatto Latte",
