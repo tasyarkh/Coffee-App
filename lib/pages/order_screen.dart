@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:coffeeku/components/bottom_navigation.dart';
+import 'package:coffeeku/pages/favorite_screen.dart';
 import 'package:coffeeku/pages/home_screen.dart';
 import 'package:coffeeku/style/style.dart';
 import 'package:flutter/material.dart';
@@ -172,7 +173,11 @@ class Orders extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: IconButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) => Nav()));
+                                      },
                                       icon: const Icon(
                                         Icons.favorite_border,
                                         size: 20,

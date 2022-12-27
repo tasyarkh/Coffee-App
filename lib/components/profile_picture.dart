@@ -14,6 +14,7 @@ class PictProfile extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
+          
           const CircleAvatar(
             backgroundImage: AssetImage("assets/img/prof.jpeg"),
           ),
